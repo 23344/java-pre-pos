@@ -15,13 +15,14 @@
 
 ## 环境
 java8
+Intellij-IDEA
 
 ## 如何开始
 - 在命令行中使用以下命令在用户本地任意目录下clone此题目库
 ```
 git clone repo_of_this_template
 ```
-- 运行所有测试：
+- 运行所有测试：克隆下来代码后，我们使用`cd`命令进入到项目目录下，运行下面的命令
 ```
 ./gradlew test
 ```
