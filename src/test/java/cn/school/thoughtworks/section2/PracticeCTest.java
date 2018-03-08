@@ -37,7 +37,7 @@ public class PracticeCTest {
             put("a", 3);
             put("e", 7);
             put("h", 11);
-            put("t", 20);
+            put("t", 19);
             put("f", 9);
             put("c", 8);
             put("g", 7);
