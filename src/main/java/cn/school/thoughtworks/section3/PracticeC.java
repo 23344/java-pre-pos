@@ -7,18 +7,30 @@ import java.util.Map;
 
 public class PracticeC {
     Map<String,Integer> createUpdatedCollection(List<String> collectionA, Map<String,List<String>> object) {
-        //实现练习要求，并改写该行代码。
-        Map<String, Integer> sameElements = new HashMap<String, Integer>() {{
-            put("a", 2);
-            put("e", 5);
-            put("h", 11);
-            put("t", 20);
-            put("f", 6);
-            put("c", 8);
-            put("g", 7);
-            put("b", 6);
-            put("d", 4);
-        }};
-        return sameElements;
+        Map<String, Integer> foldedCollection = foldCollection(collectionA);
+        List<String> keys = object.get("value");
+        for (String key: keys) {
+            updateCollectionValue(foldedCollection, key);
+        }
+
+        return foldedCollection;
+    }
+
+    private Map<String, Integer> foldCollection(List<String> collectionA) {
+        Map<String, Integer> foldedCollection = new HashMap<>();
+        for (String string: collectionA) {
+            if (foldedCollection.get(string) == null) {
+                foldedCollection.put(string, 1);
+                continue;
+            }
+            foldedCollection.put(string, foldedCollection.get(string) + 1);
+        }
+        return foldedCollection;
+    }
+
+    private void updateCollectionValue(Map<String, Integer> foldedCollection, String key) {
+        Integer originalValue = foldedCollection.get(key);
+        Integer destinationValue = originalValue - originalValue / 3;
+        foldedCollection.put(key, destinationValue);
     }
 }

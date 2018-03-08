@@ -8,17 +8,17 @@ import java.util.Map;
 public class PracticeB {
     Map<String,Integer> createUpdatedCollection(Map<String,Integer> collectionA, Map<String,List<String>> object) {
         //实现练习要求，并改写该行代码。
-        Map<String, Integer> sameElements = new HashMap<String, Integer>() {{
-            put("a", 2);
-            put("e", 5);
-            put("h", 11);
-            put("t", 20);
-            put("f", 6);
-            put("c", 8);
-            put("g", 7);
-            put("b", 6);
-            put("d", 4);
-        }};
-        return sameElements;
+        List<String> keys = object.get("value");
+        for (String key: keys) {
+            updateCollectionValue(collectionA, key);
+        }
+
+        return collectionA;
+    }
+
+    private void updateCollectionValue(Map<String, Integer> collectionA, String key) {
+        Integer originalValue = collectionA.get(key);
+        Integer destinationValue = originalValue - originalValue / 3;
+        collectionA.put(key, destinationValue);
     }
 }
