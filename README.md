@@ -1,11 +1,14 @@
 # Java编程基础
 
 ## 练习描述
+本题要求使用 Java8 Lambda 表达式、方法引用 、Stream API完成以下练习，共三个部分。
+
 1. 两个集合比较筛选 - 其中包含3个小练习
 2. 单个集合内各种元素统计 - 其中包含3个小练习
 3. 两个集合比较+筛选+统计 - 其中包含4个小练习
 
 - 练习需求描述在代码库的`src/test`（测试目录）下的section1, section2, section3中的测试代码中有文字说明
+- 完成所有题目后，项目根目录下运行`./gradlew test`，出现`BUILD SUCCESSFUL`字样即完成
 
 ## 环境描述 
 - java8
@@ -16,18 +19,13 @@
 ```
 git clone repo_of_this_template
 ```
-- 运行所有测试：克隆下来代码后，我们使用`cd`命令进入到项目目录下，运行下面的命令
-```
-./gradlew test
-```
-- 此时所有测试都是失败的
+- 在项目根目录下使用`./gradlew test`运行所有测试, 此时所有测试都是失败的
+- 阅读代码库的`src/test`（测试目录）下的section1, section2, section3中的测试代码中文字说明
 - 开始在指定的位置完成题目
 
 ## 输出规范
-- 仔细阅读代码库的`src/test`（测试目录）下的section1, section2, section3中的测试代码中文字说明
 - 将题目实现在`src/main`目录下的section1, section2, section3的对应practice中即可
-  - 举个例子：`src/test/section1/PracticeATest.java`中的测试实现需要写在`src/main/section1/PracticeA.java`中。
-- 完成所有题目后，项目根目录下运行`./gradlew test`，出现`BUILD SUCCESSFUL`字样即完成。
+  - 举个例子：`src/test/section1/PracticeATest.java`中的测试实现需要写在`src/main/section1/PracticeA.java`中
     
 ## 题目要求
 - 通过所有测试用例
